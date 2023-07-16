@@ -29,7 +29,7 @@ const MainTweet = () => {
                 pic:data.url
             }
     try {
-      const submitTweet = await axios.post("https://apifortweet.onrender.com/api/tweets", {
+      const submitTweet = await axios.post("https://tiredtweet.vercel.app/api/tweets", {
         pic: postdata.pic,
          userId: currentUser._id,
          description: tweetText,

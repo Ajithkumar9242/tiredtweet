@@ -20,8 +20,8 @@ const Profile = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const userTweets = await axios.get(`https://apifortweet.onrender.com/api/tweets/user/all/${id}`);
-        const userProfile = await axios.get(`https://apifortweet.onrender.com/api/users/find/${id}`);
+        const userTweets = await axios.get(`https://tiredtweet.vercel.app/api/tweets/user/all/${id}`);
+        const userProfile = await axios.get(`https://tiredtweet.vercel.app/api/users/find/${id}`);
 
         setUserTweets(userTweets.data);
         setUserProfile(userProfile.data);
@@ -36,7 +36,7 @@ const Profile = () => {
   const handleFollow = async () => {
     if (!currentUser.following.includes(id)) {
       try {
-        const follow = await axios.put(`https://apifortweet.onrender.com/api/users/follow/${id}`, {
+        const follow = await axios.put(`https://tiredtweet.vercel.app/api/users/follow/${id}`, {
           id: currentUser._id,
         });
         dispatch(following(id));
@@ -45,7 +45,7 @@ const Profile = () => {
       }
     } else {
       try {
-        const unfollow = await axios.put(`https://apifortweet.onrender.com/api/users/unfollow/${id}`, {
+        const unfollow = await axios.put(`https://tiredtweet.vercel.app/api/users/unfollow/${id}`, {
           id: currentUser._id,
         });
 

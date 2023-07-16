@@ -27,7 +27,7 @@ const EditProfile = ({ setOpen }) => {
 
   const handleSubmit =async () => {
         try {
-            const updatesProfile = await axios.put(`https://apifortweet.onrender.com/api/users/${currentUser._id}`, {
+            const updatesProfile = await axios.put(`https://tiredtweet.vercel.app/api/users/${currentUser._id}`, {
               // profilePicture: downloadURL,
               username: usernames,
               description: descc
@@ -72,7 +72,7 @@ const EditProfile = ({ setOpen }) => {
         // Upload completed successfully, now we can get the download URL
         getDownloadURL(uploadTask.snapshot.ref).then(async (downloadURL) => {
           try {
-            const updateProfile = await axios.put(`https://apifortweet.onrender.com/api/users/${currentUser._id}`, {
+            const updateProfile = await axios.put(`https://tiredtweet.vercel.app/api/users/${currentUser._id}`, {
               profilePicture: downloadURL,
             });
 
@@ -94,7 +94,7 @@ const EditProfile = ({ setOpen }) => {
 
 
   const handleDelete = async () => {
-    const deleteProfile = await axios.delete(`https://apifortweet.onrender.com/api/users/${currentUser._id}`);
+    const deleteProfile = await axios.delete(`https://tiredtweet.vercel.app/api/users/${currentUser._id}`);
     dispatch(logout());
     navigate("/signin");
   };

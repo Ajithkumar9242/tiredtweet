@@ -14,7 +14,7 @@ const TimelineTweet = () => {
     const fetchData = async () => {
       try {
         const timelineTweets = await axios.get(
-          `https://apifortweet.onrender.com/api/tweets/timeline/${currentUser._id}`
+          `https://tiredtweet.vercel.app/api/tweets/timeline/${currentUser._id}`
         );
 
         setTimeLine(timelineTweets.data);

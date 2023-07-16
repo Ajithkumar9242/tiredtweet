@@ -10,7 +10,7 @@ const ExploreTweets = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const exploreTweets = await axios.get("https://apifortweet.onrender.com/api/tweets/explore");
+        const exploreTweets = await axios.get("https://tiredtweet.vercel.app/api/tweets/explore");
         setExplore(exploreTweets.data);
       } catch (err) {
         console.log("error", err);
