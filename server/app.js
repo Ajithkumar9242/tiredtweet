@@ -18,7 +18,11 @@ mongoose.connect(process.env.MONGO_URL)
     console.log(error)
 })
 
-app.use(cors())
+app.use(cors({
+    origin: ["next-gamma-lilac.vercel.app"], // allow to server to accept request
+    methods: ["POST", "GET", "PUT", "DELETE"],
+    credentials: true
+}))
 app.use(express.json());
 app.use("/api/users", userRoutes);
 app.use("/api/auth", authRoutes);
