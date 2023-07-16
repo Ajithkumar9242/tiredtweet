@@ -16,7 +16,7 @@ const Register = () => {
     dispatch(loginStart());
 
     try {
-      const res = await axios.post("https://apifortweet.onrender.com/api/auth/signup", {
+      const res = await axios.post("https://tiredtweet.vercel.app/api/auth/signup", {
         username,
         email,
         password,

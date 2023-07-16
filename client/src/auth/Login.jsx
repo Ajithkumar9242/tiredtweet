@@ -12,7 +12,7 @@ const Login = () => {
     e.preventDefault();
     dispatch(loginStart());
     try {
-      const res = await axios.post("https://apifortweet.onrender.com/api/auth/signin", { username, password });
+      const res = await axios.post("https://tiredtweet.vercel.app/api/auth/signin", { username, password });
       dispatch(loginSuccess(res.data));
       navigate("/");
     } catch (err) {
