@@ -6,7 +6,7 @@
       "name": "socio pedia",
       "builds": [{ "src": "app.js", "use": "@vercel/node" }],
       "routes": [{ "src": "/(.*)", "dest": "/app.js" }],
-      "source": "/api/(.*)",
+      "source": "next-gamma-lilac.vercel.app",
       "headers": [
         { "key": "Access-Control-Allow-Credentials", "value": "true" },
         { "key": "Access-Control-Allow-Origin", "value": "*" },
