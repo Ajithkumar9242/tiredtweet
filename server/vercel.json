@@ -2,6 +2,10 @@
 {
   "headers": [
     {
+      "version": 2,
+      "name": "socio pedia",
+      "builds": [{ "src": "app.js", "use": "@vercel/node" }],
+      "routes": [{ "src": "/(.*)", "dest": "/app.js" }],
       "source": "/api/(.*)",
       "headers": [
         { "key": "Access-Control-Allow-Credentials", "value": "true" },
@@ -12,3 +16,4 @@
     }
   ]
 }
+
