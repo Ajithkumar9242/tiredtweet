@@ -19,7 +19,7 @@ mongoose.connect(process.env.MONGO_URL)
 })
 
 app.use(cors({
-    origin: ["next-gamma-lilac.vercel.app"], // allow to server to accept request
+    origin: ["https://tiredtweet.vercel.app"], // allow to server to accept request
     methods: ["POST", "GET", "PUT", "DELETE"],
     credentials: true
 }))
